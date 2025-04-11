@@ -68,7 +68,7 @@ const PatientDashboard = () => {
     const fetchFeedbacks = async (patientID) => {
       try {
         const res = await axios.post(
-          "http://localhost:3000/bloom/v1/api/patient/fetchMy",
+          "https://careloop.onrender.com/bloom/v1/api/patient/fetchMy",
           { patientID }
         );
         const response = res.data;
@@ -97,7 +97,7 @@ const PatientDashboard = () => {
   const handleLogout = async () => {
     try {
       const response = await fetch(
-        "http://localhost:3000/bloom/v1/api/patient/out",
+        "https://careloop.onrender.com/bloom/v1/api/patient/out",
         {
           method: "POST",
           credentials: "include",
@@ -154,7 +154,7 @@ const PatientDashboard = () => {
 
       try {
         const response = await fetch(
-          "http://localhost:3000/bloom/v1/api/upload/audio",
+          "https://careloop.onrender.com/bloom/v1/api/upload/audio",
           {
             method: "POST",
             body: formData,
@@ -191,7 +191,7 @@ const PatientDashboard = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/bloom/v1/api/patient/feed",
+        "https://careloop.onrender.com/bloom/v1/api/patient/feed",
         feedbackData
       );
 
